@@ -10,13 +10,13 @@
 
 / {
         behaviors {
-                bhm: balanced_homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                tapping-term-ms = <200>;    // <---[[moderate duration]]
-                quick-tap-ms = <0>;
-                flavor = "balanced";
-                bindings = <&kp>, <&kp>;
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
                 };
         };
         keymap {
@@ -31,7 +31,7 @@
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp ESC
-   &kp LSHFT &bhm LGUI A &bhm LALT R &bhm LSHFT S &bhm LCTRL T &kp G   &kp M &bhm RCTRL N  &bhm RSHFT E     &bhm RALT I   &bhm RGUI O &kp SQT
+   &kp LSHFT &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &hm RALT I   &hm RGUI O &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RALT
                   &mo 2 &mo 1 &kp BKSP   &kp SPACE &lt 1 ENTER &mo 2
                         >;
