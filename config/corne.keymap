@@ -34,16 +34,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | ESC |
-// | SHFT |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  '   |
-// | CTRL |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  | ALT  |
+// |  ESC |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | BKSP |
+// | TAB |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  '   |
+// | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  | :  |
 //                    | RAISE | LWR | BKSP |   | SPC | ENTER  | RAISE |
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp ESC
-   &kp LSHFT &hm LGUI A &am LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &am RALT I   &hm RGUI O &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RALT
-                  &mo 2 &mo 1 &kp BKSP   &kp SPACE &lt 1 ENTER &mo 2
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BKSP
+   &kp TAB &hm LGUI A &am LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &am RALT I   &hm RGUI O &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp COLON
+                  &mo 2 &mo 1 &kp BKSP   &mo 2 SPACE &lt 1 ENTER &mo 2
                         >;
                 };
                 lower_layer {
