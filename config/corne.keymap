@@ -19,6 +19,14 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
+                am: alt_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        tapping-term-ms = <500>;    // <---[[moderate duration]]
+                        quick-tap-ms = <100>;
+                        require-prior-idle-ms = <500>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                }
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -32,7 +40,7 @@
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp ESC
-   &kp LSHFT &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &hm RALT I   &hm RGUI O &kp SQT
+   &kp LSHFT &hm LGUI A &am LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &am RALT I   &hm RGUI O &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RALT
                   &mo 2 &mo 1 &kp BKSP   &kp SPACE &lt 1 ENTER &mo 2
                         >;
