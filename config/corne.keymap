@@ -37,13 +37,14 @@
 // |  ESC |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | BKSP |
 // | TAB |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  '   |
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  | :  |
-//                    | RAISE | LWR | BKSP |   | SPC | ENTER  | RAISE |
+//                    | RAISE | CMD | lower_BKSP |   | raise_SPC | lower_ENTER  | GRAVE |
+
                         display-name = "Base";
                         bindings = <
    &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BKSP
    &kp TAB &hm LGUI A &am LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &am RALT I   &hm RGUI O &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp COLON
-                  &mo 2 &mo 1 &kp BKSP   &lt 2 SPACE &lt 1 ENTER &mo 2
+                  &mo 2 &kp LGUI &lt 1 BKSP   &lt 2 SPACE &lt 1 ENTER &kp GRAVE
                         >;
                 };
                 lower_layer {
@@ -57,22 +58,22 @@
         &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &trans
         &trans   &trans  &trans  &trans  &trans  &trans   &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans &kp HOME &kp PG_DN &kp PG_UP &kp END &trans
-                &mo 2 &mo 1 &kp BKSP   &kp SPACE &lt 1 ENTER &mo 2
+                  &mo 2 &kp LGUI &lt 1 BKSP   &lt 2 SPACE &lt 1 ENTER &kp GRAVE
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  GRAVE |  !  |  @  |  #  |  $  |  %        |||     |  ^  |  &  |  *  |  (  |  )  |      |
+// |         |  !  |  @  |  #  |  $  |  %        |||     |  ^  |  &  |  *  |  (  |  )  |      |
 // |  vol up | prev | next |     |              |||     |  -  |  =  |  [  |  ]  |  \  |      |
 // |  vol dn | play |BRI_DN| BRI_UP |     |     |||     |  _  |  +  |  {  |  }  | "|" |      |
 //                     | RAISE | LWR | BKSP|   | SPC | ENTER  | RAISE |
                         display-name = "Raise";
                         bindings = <
-   &kp  GRAVE  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
    &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &trans
    &kp C_VOL_DN  &kp C_PP   &kp C_BRI_DN &kp C_BRI_UP   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
-                    	     &mo 2 &mo 1 &kp BKSP   &kp SPACE &lt 1 ENTER &mo 2
+                  &mo 2 &kp LGUI &lt 1 BKSP   &lt 2 SPACE &lt 1 ENTER &kp GRAVE
                         >;
                 };
         };
