@@ -40,14 +40,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | ALT-GRAVE |
+// |  ALT-TAB |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | ALT-GRAVE |
 // | SHFT |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  SHFT-'   |
 // | CTRL |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   CTRL    |
 //                    | RAISE | CMD_ENTER | lower_BKSP |   | raise_SPC | lower_ENTER  | CMD-ESC |
 
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &hm RALT GRAVE
+   &hm LALT TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &hm RALT GRAVE
    &kp LSHFT &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O       &hm RSHFT SQT
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
                   &mo 2 &hm LGUI ENTER &lt 1 BKSP   &lt 2 SPACE &lt 1 ENTER &hm RGUI ESC
