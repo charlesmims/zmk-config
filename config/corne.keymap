@@ -10,8 +10,8 @@
 
 
 &lt {
-        tapping-term-ms = <200>;
-        quick-tap-ms = <500>;
+        tapping-term-ms = <100>;
+        quick-tap-ms = <200>;
 };
 &mt {
         quick-tap-ms = <200>;
@@ -46,7 +46,7 @@
 // |  ESC |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | ALT-GRAVE |
 // | TAB |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  '   |
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   SHFT    |
-//                    | RAISE | CMD | lower_BKSP |   | raise_SPC | lower_ENTER  | CTRL |
+//          | RAISE | CMD | lower_BKSP |   | raise_SPC | lower_ENTER  | CTRL |
 
                         display-name = "Base";
                         bindings = <
