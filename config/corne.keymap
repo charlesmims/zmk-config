@@ -48,16 +48,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | ALT-GRAVE |
+// |  GRAVE |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | bkspdel |
 // | TAB |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  CTRL-'   |
-// | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   SHFT    |
+// | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   SHFT-ESC    |
 //          | CMD | RAISE | lower_BKSP |   | raise_SPC | lower_ENTER  | CMD |
 
                         display-name = "Base";
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &mt RALT GRAVE
+   &kp  GRAVE   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &bkspdel
    &kp TAB &hm LGUI A &am LALT R &hm LSHFT S &hm LCTRL T &kp G   &kp M &hm RCTRL N  &hm RSHFT E     &am RALT I   &am RGUI O   &mt RCTRL SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RSHFT ESC
                 &kp LGUI &mo 2  &lt 1 BKSP   &lt 2 SPACE &lt 1 ENTER &kp RGUI
                         >;
                 };
