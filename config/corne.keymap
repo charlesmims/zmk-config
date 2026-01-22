@@ -51,25 +51,25 @@
 // |  tab |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  | bkspdel |
 // | ctrl |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |  alt '  |
 // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   SHFT-GRAVE   |
-//          | RAISE | CMD | BKSP |   | SPC |  lower | raise-ENTER
+//          | RAISE | CMD | lower-BKSP |   | SPC |  lower-ENTER | layer-3
 
                         display-name = "Base";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &bkspdel
    &kp LCTRL &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O   &mt LALT SQT
    &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RSHFT GRAVE
-                &mo 2  &kp LGUI &kp BKSP   &kp SPACE &mo 1 &lt 2 ENTER 
+                &mo 2  &kp LGUI &lt 1 BKSP   &kp SPACE  &lt 1 ENTER  &mo 3
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8   |  9  |  0  |      |
+// ----------------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8   |  9  |  0  |   -   |
 // |      |  <  |  >  |  (  |  )  |     |   |  =  | LFT  |  DWN | UP  | RGT |   \  |
 // |      |     |     |  [  |  ]  |     |   |  -  | HOME | PGDN | PGUP| END |  esc |
 //                    |     |     |     |   |     |      |      |
                         display-name = "Lower";
                         bindings = <
-        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &trans
+        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &kp MINUS
         &trans   &kp LT  &kp GT  &kp LPAR  &kp RPAR &trans   &kp EQUAL  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSLH
         &trans &trans &trans &kp LBKT &kp RBKT  &trans    &kp MINUS &kp HOME &kp PG_DN &kp PG_UP &kp END &kp FSLH
                   &trans &trans &trans  &trans &trans &trans
@@ -92,4 +92,20 @@
                             >;
                 };
         };
+
+
+                layer_three {
+// ----------------------------------------------------------------------------------------
+// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &   |  *   |  ( |  )  |   -   |
+// |      |  <  |  >  |  (  |  )  |     |   |  =  | LFT  |  DWN | UP  | RGT |   \  |
+// |      |     |     |  [  |  ]  |     |   |  -  | HOME | PGDN | PGUP| END |  esc |
+//                    |     |     |     |   |     |      |      |
+                        display-name = "Lower";
+                        bindings = <
+        &trans   &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT      &kp CARET     &kp AMPS    &kp STAR   &kp LPAR    &kp RPAR   &kp MINUS
+        &trans   &kp LT  &kp GT  &kp LPAR  &kp RPAR &trans   &kp EQUAL  &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSLH
+        &trans &trans &trans &kp LBKT &kp RBKT  &trans    &kp MINUS &kp HOME &kp PG_DN &kp PG_UP &kp END &kp FSLH
+                  &trans &trans &trans  &trans &trans &trans
+                        >;
+                };
 };
