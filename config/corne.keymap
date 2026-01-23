@@ -44,7 +44,7 @@
                         bkspdel: backspace_delete {
                                 compatible = "zmk,behavior-mod-morph";
                                 #binding-cells = <0>;
-                                bindings = <&kp BKSP>, <&kp DELETE>;
+                                bindings = <&bksp_or_space>, <&kp DELETE>;
                                 mods = <(MOD_LSFT|MOD_RSFT)>;
                         };
                         bkspdel_layer: bkspdel_layer {
@@ -64,10 +64,9 @@
                                         , <&macro_tap &kp SPACE>
                                         , <&macro_release &kp LGUI>
                                         ;
-                                };
                         };
                 };
-                &keymap {
+                keymap {
                         compatible = "zmk,keymap";
 
                         default_layer {
@@ -81,8 +80,8 @@
                                 bindings = <
         &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSLH
         &kp TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O   &kp SQT
-        &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
-                        &kp LCTRL &kp LALT &bkspdel_layer CMD 0   &mo CMD SPACE  &lt 1 ENTER  &lt 2 ENTER
+        &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                        &kp LCTRL &kp LALT &bkspdel_layer 1 0   &mt LGUI SPACE  &lt 1 ENTER  &lt 2 ENTER
                                 >;
                         };
                         lower_layer {
@@ -134,4 +133,4 @@
                                 >;
                         };
                 };
-                        
+        };
