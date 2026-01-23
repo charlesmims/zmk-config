@@ -50,7 +50,7 @@
                         bkspdel_layer: bkspdel_layer {
                                 compatible = "zmk,behavior-hold-tap";
                                 #binding-cells = <2>;
-                                tapping-term-ms = <200>;
+                                tapping-term-ms = <250>;
                                 flavor = "tap-preferred";
                                 bindings = <&kp>, <&bkspdel>;
                         };
@@ -79,14 +79,14 @@
 
                         default_layer {
         // -----------------------------------------------------------------------------------------
-        // |  esc |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  |  \
+        // |  esc |  Q  |  W  |  F  |  p  |  b  |   |  j  |  l   |  u  |  y  |  ;  |  -
         // | tab |  A  |  r  |  s  |  t  |  G  |   |  m  |  n   |  e  |  i  |  o  |   '  |
         // | SHFT |  Z  |  X  |  C  |  d  |  v  |   |  k  |  h   |  ,  |  .  |  /  |   SHFT  |
         //          | ctrl | option | cmd-BKSPDESPACE |   | cmd-SPC |  lower-ENTER | layer-3
 
                                 display-name = "Base";
                                 bindings = <
-        &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSLH
+        &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp MINUS
         &kp TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O   &kp SQT
         &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                         &kp LCTRL &kp LALT &bkspdel_layer LGUI 0   &mt LGUI SPACE  &lt 1 ENTER  &lt 2 ENTER
@@ -94,13 +94,13 @@
                         };
                         lower_layer {
         // ----------------------------------------------------------------------------------------
-        // |   GRAVE   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8   |  9  |  0  |   -   |
+        // |   GRAVE   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8   |  9  |  0  |   \   |
         // |      |  <  |  >  |  (  |  )  |     |   |  =  | LFT  |  DWN | UP  | RGT |     |
         // |      |  :  |     |  [  |  ]  |     |   |  -  | HOME | PGDN | PGUP| END |       |
         //                    |     |     |  cmd-bkspdel   |   |     |      |      |
                                 display-name = "Lower";
                                 bindings = <
-                &kp GRAVE   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &kp MINUS
+                &kp GRAVE   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &kp BSLH
                 &trans   &kp LT  &kp GT  &kp LPAR  &kp RPAR &none   &kp EQUAL  &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
                 &trans &kp COLON &none &kp LBKT &kp RBKT  &none    &kp MINUS &kp HOME &kp PG_DN &kp PG_UP &kp END &trans
                         &trans &trans &trans  &space_cmd_ht LGUI SPACE &trans &lt 3 ENTER
