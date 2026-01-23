@@ -56,7 +56,7 @@
 
                 };
                 macros {
-                        space_cmd : space_cmd {
+                        space_cmd: space_cmd {
                                 compatible = "zmk,behavior-macro";
                                 #binding-cells = <0>;
                                 bindings
